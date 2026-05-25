@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Membership Plans</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg, #121212, #1f1f1f);
+      color: white;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      padding:40px 20px;
+    }
+
+    .container{
+      width:100%;
+      max-width:1100px;
+      text-align:center;
+    }
+
+    .title{
+      font-size:48px;
+      margin-bottom:15px;
+      font-weight:700;
+    }
+
+    .subtitle{
+      color:#bdbdbd;
+      margin-bottom:50px;
+      font-size:18px;
+    }
+
+    .plans{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1c1c1c;
+      border-radius:24px;
+      padding:40px 30px;
+      position:relative;
+      overflow:hidden;
+      transition:0.3s ease;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:#ff424d;
+    }
+
+    .badge{
+      position:absolute;
+      top:20px;
+      right:20px;
+      background:#ff424d;
+      color:white;
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:bold;
+    }
+
+    .plan-name{
+      font-size:30px;
+      margin-bottom:10px;
+      font-weight:700;
+    }
+
+    .price{
+      font-size:60px;
+      font-weight:800;
+      margin:20px 0;
+      color:#ff424d;
+    }
+
+    .price span{
+      font-size:20px;
+      color:#aaa;
+    }
+
+    .features{
+      list-style:none;
+      margin:30px 0;
+      text-align:left;
+    }
+
+    .features li{
+      margin-bottom:15px;
+      color:#d8d8d8;
+      padding-left:28px;
+      position:relative;
+    }
+
+    .features li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      color:#ff424d;
+      font-weight:bold;
+    }
+
+    .btn{
+      display:inline-block;
+      width:100%;
+      padding:16px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:17px;
+      transition:0.3s ease;
+      background:#ff424d;
+      color:white;
+      border:none;
+      cursor:pointer;
+    }
+
+    .btn:hover{
+      background:#ff6570;
+      transform:scale(1.02);
+    }
+
+    @media(max-width:768px){
+      .title{
+        font-size:36px;
+      }
+
+      .price{
+        font-size:48px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">Choose Your Membership</h1>
+
+    <p class="subtitle">
+      Unlock exclusive premium content and special access.
+    </p>
+
+    <div class="plans">
+
+      <!-- $5 Plan -->
+      <div class="card">
+        <div class="badge">POPULAR</div>
+
+        <h2 class="plan-name">Basic</h2>
+
+        <div class="price">
+          $5 <span>/ month</span>
+        </div>
+
+        <ul class="features">
+          <li>About 200 CP Images</li>
+          <li>Daily new content</li>
+        </ul>
+
+        <a class="btn"
+           href="https://www.patreon.com/checkout/Naked_Whispers?rid=28262301"
+           target="_blank">
+          Subscribe for $5
+        </a>
+      </div>
+
+      <!-- $10 Plan -->
+      <div class="card">
+        <div class="badge">VIP</div>
+
+        <h2 class="plan-name">Premium</h2>
+
+        <div class="price">
+          $10 <span>/ month</span>
+        </div>
+
+        <ul class="features">
+          <li>Everything in the Basic plan</li>
+          <li>CP Videos</li>
+        </ul>
+
+        <a class="btn"
+           href="https://www.patreon.com/checkout/Naked_Whispers?rid=28262301"
+           target="_blank">
+          Subscribe for $10
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
